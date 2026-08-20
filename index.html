@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Урок 5. Тестирование браузерных пушей</title>
 <script src="https://pxl.demo.altcraft.com/ak_container.js?id=NjMxfDI=" ></script>
+	<!-- Подключаем скрипт формы с атрибутом defer, чтобы он не блокировал загрузку страницы и тесты -->
+    <script src="https://pxl.demo.altcraft.com/form/js/embed_v1.js" defer></script>
+
 </head>
 <body>
 
@@ -24,5 +27,20 @@
 
     <p>Урок 5. Тестирование браузерных пушей</p>
 
+	 <!-- Контейнер для формы (можно стилизовать через CSS) -->
+    <div class="form-container" style="max-width: 600px; margin: 0 auto; padding: 20px;">
+        
+        <iframe 
+            src="https://pxl.demo.altcraft.com/form?form=8NJf1mCeuRv75dBenr42Gi6KwifrwWLgEFYht3rgAn8y3irvMKUgKHBNx2KTJ6tuQ8ry9ZQtcww4tFukvxsebKjn&iframe=1" 
+            frameborder="0" 
+            name="ak-form-8NJf1mCeuRv75dBenr42Gi6KwifrwWLgEFYht3rgAn8y3irvMKUgKHBNx2KTJ6tuQ8ry9ZQtcww4tFukvxsebKjn" 
+            class="ak-form" 
+            width="100%" 
+            height="500px" 
+            style="border: none;"
+            sandbox="allow-same-origin allow-forms allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation">
+        </iframe>
+
+    </div>
 	</body>
 </html>
