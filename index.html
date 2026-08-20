@@ -4,49 +4,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Урок 5. Тестирование браузерных пушей</title>
-<script src="https://pxl.demo.altcraft.com/ak_container.js?id=NjMxfDI=" ></script>
-	<!-- Подключаем скрипт формы с атрибутом defer, чтобы он не блокировал загрузку страницы и тесты -->
-    <script src="https://pxl.demo.altcraft.com/form/js/embed_v1.js" defer></script>
+    
+    <!-- Современные шрифты и минималистичные стили -->
+    <style>
+        :root {
+            --primary-color: #6c5ce7;
+            --accent-color: #00cec9;
+            --text-color: #2d3436;
+            --bg-color: #f4f4f7;
+            --card-bg: #ffffff;
+            --border-radius: 12px;
+        }
 
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .page-wrapper {
+            width: 100%;
+            max-width: 640px;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        .header-panel {
+            text-align: center;
+            margin-bottom: 35px;
+            border-bottom: 2px dashed #e2e8f0;
+            padding-bottom: 25px;
+        }
+
+        .lesson-tag {
+            display: inline-block;
+            background: #eef2ff;
+            color: var(--primary-color);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 800;
+            margin: 0;
+            color: #1a1a24;
+        }
+
+        /* Кнопка подписки */
+        .btn-push {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            background-color: var(--primary-color);
+            color: #ffffff;
+            border: none;
+            padding: 16px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(108, 92, 231, 0.2);
+            transition: all 0.25s ease;
+            margin-bottom: 30px;
+        }
+
+        .btn-push:hover {
+            background-color: #5b4cc4;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(108, 92, 231, 0.3);
+        }
+
+        .btn-push:active {
+            transform: translateY(1px);
+        }
+
+        /* Контейнер для формы встроенного фрейма */
+        .form-container {
+            background: #fafafa;
+            border: 1px solid #edf2f7;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+
+        /* Навигационная ссылка */
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            color: #718096;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+            padding: 10px 0;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-color);
+        }
+
+        .nav-link::after {
+            content: " →";
+            transition: transform 0.2s ease;
+        }
+
+        .nav-link:hover::after {
+            transform: translateX(4px);
+        }
+    </style>
+
+    <script src="https://pxl.demo.altcraft.com/ak_container.js?id=NjMxfDI="></script>
+    <!-- Подключаем скрипт формы с атрибутом defer, чтобы он не блокировал загрузку страницы и тесты -->
+    <script src="https://pxl.demo.altcraft.com/form/js/embed_v1.js" defer></script>
 </head>
 <body>
 
-	<!-- START OF ALTCRAFT PIXEL CODE !-->
-      <script type="text/javascript">
-      !function(){var e={url:"https://pxl.demo.altcraft.com/pixel?k=4jtMs0znxJCWjz7VmhQgYED5PnuCQXaubmjAHAFAb41axZT5IQLfp91HVEW46hhg&s=zRM%2FuI2N0sQ%3D",goals:"pageView",value:parseFloat("0"),timeout:parseInt("5000"),after_scroll:JSON.parse("false"),auto_load:JSON.parse("true")},o=function(o,t,n,a){var d=[].concat(o).map(function(e){return encodeURIComponent(e)}).join(","),c=encodeURIComponent(String(t||0)),i=encodeURIComponent(n.matching_mode||""),r=encodeURIComponent(n.db_id||0),u=encodeURIComponent(JSON.stringify(n.match||{})),l=encodeURIComponent(JSON.stringify(n.update||{}));setTimeout(function(){(new Image).src=[e.url,"goals="+d,"value="+c,"db_id="+r,"mmode="+i,"match="+u,"update="+l].join("&")},a)},t=!1,n=function(){t||(t=!0,e.after_scroll?document.addEventListener("scroll",function(){(window.pageYOffset||document.documentElement.scrollTop>0)&&o(e.goals,e.value,{},e.timeout)},{once: true}):e.auto_load&&o(e.goals,e.value,{},e.timeout))};"complete"===document.readyState||"interactive"===document.readyState?n():window.addEventListener("load",n);window.ak_pixel_push=function(e,t,n,a,d,c){var i=[];Array.isArray(e)?i=e:i[0]=e,o(i,t,{match:n,update:a,matching_mode:d,db_id:c},0)}}();
-      </script>
-      <!-- END OF ALTCRAFT PIXEL CODE !-->
+    <!-- START OF ALTCRAFT PIXEL CODE !-->
+    <script type="text/javascript">
+    !function(){var e={url:"https://pxl.demo.altcraft.com/pixel?k=4jtMs0znxJCWjz7VmhQgYED5PnuCQXaubmjAHAFAb41axZT5IQLfp91HVEW46hhg&s=zRM%2FuI2N0sQ%3D",goals:"pageView",value:parseFloat("0"),timeout:parseInt("5000"),after_scroll:JSON.parse("false"),auto_load:JSON.parse("true")},o=function(o,t,n,a){var d=[].concat(o).map(function(e){return encodeURIComponent(e)}).join(","),c=encodeURIComponent(String(t||0)),i=encodeURIComponent(n.matching_mode||""),r=encodeURIComponent(n.db_id||0),u=encodeURIComponent(JSON.stringify(n.match||{})),l=encodeURIComponent(JSON.stringify(n.update||{}));setTimeout(function(){(new Image).src=[e.url,"goals="+d,"value="+c,"db_id="+r,"mmode="+i,"match="+u,"update="+l].join("&")},a)},t=!1,n=function(){t||(t=!0,e.after_scroll?document.addEventListener("scroll",function(){(window.pageYOffset||document.documentElement.scrollTop>0)&&o(e.goals,e.value,{},e.timeout)},{once: true}):e.auto_load&&o(e.goals,e.value,{},e.timeout))};"complete"===document.readyState||"interactive"===document.readyState?n():window.addEventListener("load",n);window.ak_pixel_push=function(e,t,n,a,d,c){var i=[];Array.isArray(e)?i=e:i[0]=e,o(i,t,{match:n,update:a,matching_mode:d,db_id:c},0)}}();
+    </script>
+    <!-- END OF ALTCRAFT PIXEL CODE !-->
 
-<button id="init_sub">Подписаться на уведомления</button> // Кнопка подписки
-
-<script>
-	document.getElementById('init_sub').addEventListener('click', function() { // По клику на кнопку..
-	try {
-		var akPush = new AKPush();
-		akPush.initSubscription() // Покажет форму для подписки
-		}
-	catch (e) {
-		console.log(e); // В случае ошибки выведет сообщение в консоль
-		}
-	});
-</script>
-
-    <p>Урок 5. Тестирование браузерных пушей</p>
-
-	 <!-- Контейнер для формы (можно стилизовать через CSS) -->
-    <div class="form-container" style="max-width: 600px; margin: 0 auto; padding: 20px;">
+    <div class="page-wrapper">
         
-        <iframe 
-            src="https://pxl.demo.altcraft.com/form?form=8NJf1mCeuRv75dBenr42Gi6KwifrwWLgEFYht3rgAn8y3irvMKUgKHBNx2KTJ6tuQ8ry9ZQtcww4tFukvxsebKjn&iframe=1" 
-            frameborder="0" 
-            name="ak-form-8NJf1mCeuRv75dBenr42Gi6KwifrwWLgEFYht3rgAn8y3irvMKUgKHBNx2KTJ6tuQ8ry9ZQtcww4tFukvxsebKjn" 
-            class="ak-form" 
-            width="100%" 
-            height="500px" 
-            style="border: none;"
-            sandbox="allow-same-origin allow-forms allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation">
-        </iframe>
-<a href="page2.html">Перейти на Страницу 2</a>
+        <!-- Верхняя контентная панель -->
+        <div class="header-panel">
+            <span class="lesson-tag">Урок 5</span>
+            <h1>Тестирование браузерных пушей</h1>
+        </div>
+
+        <!-- Кнопка подписки -->
+        <button id="init_sub" class="btn-push">
+            🔔 Подписаться на уведомления
+        </button>
+
+        <!-- Контейнер для формы -->
+        <div class="form-container">
+            <iframe 
+                src="https://pxl.demo.altcraft.com/form?form=8NJf1mCeuRv75dBenr42Gi6KwifrwWLgEFYht3rgAn8y3irvMKUgKHBNx2KTJ6tuQ8ry9ZQtcww4tFukvxsebKjn&iframe=1" 
+                frameborder="0" 
+                name="ak-form-8NJf1mCeuRv75dBenr42Gi6KwifrwWLgEFYht3rgAn8y3irvMKUgKHBNx2KTJ6tuQ8ry9ZQtcww4tFukvxsebKjn" 
+                class="ak-form" 
+                width="100%" 
+                height="500px" 
+                style="border: none;"
+                sandbox="allow-same-origin allow-forms allow-scripts allow-popups allow-popups-to-escape-sandbox allow-top-navigation">
+            </iframe>
+        </div>
+
+        <!-- Ссылка на следующую страницу -->
+        <a href="page2.html" class="nav-link">Перейти на Страницу 2</a>
+        
     </div>
-	</body>
+
+    <script>
+        document.getElementById('init_sub').addEventListener('click', function() {
+            try {
+                var akPush = new AKPush();
+                akPush.initSubscription();
+            }
+            catch (e) {
+                console.log(e);
+            }
+        });
+    </script>
+
+</body>
 </html>
