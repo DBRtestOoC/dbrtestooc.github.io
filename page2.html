@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 9. Размещение пикселя — Страница 2</title>
+    <style>
+        /* Общие стили для красивого фона и шрифтов */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* Карточка-контейнер по центру */
+        .container {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        /* Красивый заголовок */
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        /* Описание страницы */
+        p {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin-bottom: 30px;
+        }
+
+        /* Блок с кнопками */
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* Стильные современные кнопки */
+        button {
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Кнопка 1 (Синяя) */
+        #btn_1 {
+            background-color: #3498db;
+            color: white;
+        }
+
+        #btn_1:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(52, 152, 219, 0.3);
+        }
+
+        /* Кнопка 2 (Фиолетовая) */
+        #btn_2 {
+            background-color: #9b59b6;
+            color: white;
+        }
+
+        #btn_2:hover {
+            background-color: #8e44ad;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(155, 89, 182, 0.3);
+        }
+
+        /* Эффект нажатия для обеих кнопок */
+        button:active {
+            transform: translateY(0);
+        }
+
+        /* Ссылка на главную страницу */
+        .back-link {
+            display: inline-block;
+            color: #7f8c8d;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #34495e;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Урок 9: Менеджер тегов</h1>
+        <p>Вы находитесь на <strong>Странице 2</strong></p>
+        
+        <!-- Кнопки сохранили свои id для Altcraft -->
+        <div class="button-group">
+            <button id="btn_1">🔵 Кнопка 1</button>
+            <button id="btn_2">🟣 Кнопка 2</button>
+        </div>
+
+        <!-- Удобный возврат назад -->
+        <a href="index.html" class="back-link">← Вернуться на Страницу 1</a>
+    </div>
+
+</body>
+</html>
